@@ -1,4 +1,4 @@
-package com.ljh.project.yuapigateway;
+package com.ljh.apigateway;
 
 import com.ljh.project.provider.DemoService;
 import org.apache.dubbo.config.annotation.DubboReference;

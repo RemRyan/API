@@ -1,4 +1,4 @@
-package com.ljh.project.exception;
+package com.ljh.apicommon.exception;
 
 
 import com.ljh.apicommon.common.ErrorCode;

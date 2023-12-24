@@ -1,8 +1,8 @@
-package com.ljh.project.yuapigateway;
+package com.ljh.apigateway;
 
-import com.ljh.project.exception.BusinessException;
 import com.ljh.apiclientsdk.utils.SignUtils;
 import com.ljh.apicommon.common.ErrorCode;
+import com.ljh.apicommon.exception.BusinessException;
 import com.ljh.apicommon.model.entity.InterfaceInfo;
 import com.ljh.apicommon.model.entity.User;
 import com.ljh.apicommon.model.enums.InterfaceInfoStatusEnum;

@@ -1,4 +1,4 @@
-package com.ljh.project.yuapigateway;
+package com.ljh.apigateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
