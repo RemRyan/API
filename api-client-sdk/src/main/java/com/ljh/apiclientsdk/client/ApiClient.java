@@ -62,6 +62,7 @@ public class ApiClient {
         String json = JSONUtil.toJsonStr(user);
         HttpResponse httpResponse = HttpRequest.post(GATEWAY_HOST + "/api/name/user")
                 .addHeaders(getHeaderMap(json))
+                .header("Content-Type", "application/json; charset=UTF-8")
                 .body(json)
                 .execute();
         System.out.println(httpResponse.getStatus());

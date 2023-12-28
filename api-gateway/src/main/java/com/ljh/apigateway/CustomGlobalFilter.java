@@ -68,6 +68,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
         String sourceAddress = request.getLocalAddress().getHostString();
         log.info("请求来源地址：" + sourceAddress);
         log.info("请求来源地址：" + request.getRemoteAddress());
+        // 校验参数
         Mono<Void> result = verifyParameters(exchange, chain);
         return result;
     }
@@ -153,7 +154,8 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
             return response.setComplete();
         }
         HttpHeaders headers = request.getHeaders();
-        String body = headers.getFirst("body");
+        String body = new String(Objects.requireNonNull(headers.getFirst("body")).getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
+
         String accessKey = headers.getFirst("accessKey");
         String timestamp = headers.getFirst("timestamp");
         String sign = headers.getFirst("sign");
